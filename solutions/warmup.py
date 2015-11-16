@@ -142,5 +142,8 @@ def next_hack(n):
 			counter1s += 1
 	if (counter1s % 2) == 0:
 		is_odd = False
-	return is_odd and palindrome(number)
-print (next_hack(7))
+	if (is_odd and palindrome(number)) == False:
+		return next_hack(n_val + 1)
+	else:
+		return(n_val)
+print (next_hack(7910))
